@@ -7,12 +7,17 @@
   min-height: 100vh;
   padding: 0 0.5rem;
 }
+.backboard{
+  display: flex;
+  flex: ;
+  flex-wrap: ;
+}
 
 .board {
   display: flex;
   flex: row;
   flex-wrap: wrap;
-  width: 288px;
+  width: 272px;
   height: 288px;
   background-color: #aaa;
 }
