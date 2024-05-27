@@ -8,31 +8,61 @@
   padding: 0 0.5rem;
 }
 
-.backboard {
+.backboardStyle {
   display: flex;
-  flex: ;
-  flex-wrap: ;
-}
-
-.board {
-  display: flex;
-  flex: row;
   flex-wrap: wrap;
-  width: 272px;
-  height: 288px;
-  background-color: #aaa;
+  width: 309px;
+  height: 400px;
+  background-color: silver;
+  border: outset 5px;
 }
 
-.number {
+.boardStyle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 279px;
+  height: 80px;
+  margin: 10px; /* 上・左右 */
+  background-color: silver;
+  border: inset 5px;
+}
+
+.gameboardStyle {
+  display: flex;
+  flex-wrap: wrap;
+  width: 288px;
+  height: 288px;
+  margin: 0 10px 10px; /* 上・左右・下 */
+  background-color: silver;
+  border: inset 5px;
+}
+
+.cellStyle {
+  display: flex;
+  flex-wrap: wrap;
+  width: 30px;
+  height: 30px;
+  border: solid #999;
+}
+
+.stoneStyle {
+  flex-wrap: wrap;
+  width: 30px;
+  height: 30px;
+  border: outset 3px;
+}
+
+.smileyStyle {
+  flex-wrap: wrap;
+  width: 40px;
+  height: 40px;
+  border: outset 3px;
+}
+
+.sampleStyle {
   width: 30px;
   height: 30px;
   background: url('../../assets_images/icons.png') no-repeat;
-  border: solid 1px #fff;
-}
-
-.stone {
-  width: 32px;
-  height: 32px;
-  background-color: #ccc;
-  border: outset 5px #ddd;
 }

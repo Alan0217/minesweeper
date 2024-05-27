@@ -1,9 +1,7 @@
-import styles from '.index.module.css';
 import { useState } from 'react';
-
+import styles from './index.module.css';
 const Home = () => {
-  const [sample, setSample] = usestate(0);
-
+  const [samplePos, setsamplePos] = useState(0);
   const [bombMap, setBombMap] = useState([
     [0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -27,12 +25,39 @@ const Home = () => {
     [0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0],
   ]);
-
+  // const board = [...Array(9)].map((_, y) => [...Array(9)].map((_, x) => ((y + x + 1) % 13) - 1));
+  // const board: number[][] = [];
+  console.log(samplePos);
+  console.log(styles.box1);
+  // const cellClickHandler = (x, y) => {
+  //   console.log(`Cell clicked at x: ${x}, y: ${y}`);
+  //   // ここにセルをクリックした際の処理を追加
+  // };
   return (
     <div className={styles.container}>
-      <div className={styles.backboard}>
-        <div className={styles.board} />
+      <div className={styles.backboardStyle}>
+        <div className={styles.boardStyle}>
+          <div className={styles.smileyStyle}>
+            {/* <button onClick={() => setsamplePos((p) => (p + 1) % 14)}>sample</button>  */}
+          </div>
+        </div>
+        <div className={styles.gameboardStyle}>
+          {userInputs.map((row, y) =>
+            row.map((number, x) => (
+              <div className={styles.stoneStyle}>
+                <div
+                  className={styles.sampleStyle}
+                  style={{ backgroundPosition: `${-1 * -30}px 0px` }}
+                />
+              </div>
+              // <div className={styles.cellStyle}>
+              //
+            ))
+          )}
+        </div>
       </div>
+      {/* <button onClick={() => setsamplePos((p) => (p + 1) % 14)}>sample</button> */}
     </div>
   );
 };
+export default Home;
